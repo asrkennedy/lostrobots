@@ -4,7 +4,7 @@ $(function(){
 
   var windowHeight = $(window).height();
 
-  var isMobile = window.matchMedia("only screen and (max-width: 760px)");
+  var isMobile = window.matchMedia("only screen and (max-device-width: 760px)");
 
   var element = $('.team_photo')
 
@@ -104,6 +104,7 @@ $('.team_photo').on('click', function(){
            $('nav ul').slideToggle();
         }
       });
+      $('.team_photo_hov').remove();
    }
 
   // Gets height & width for hover div on load

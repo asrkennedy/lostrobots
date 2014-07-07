@@ -458,4 +458,21 @@ footer p {
     padding-bottom: 0;
     background-color: transparent;
   }
+
+  .team_text_more {
+    display: block;
+  }
+
+  .team_photo_hov {
+    display: none;
+  }
+
+  .team_photo img:hover {
+    opacity: 1;
+  }
+
+  .team_photo:hover .team_photo_hov {
+    visibility: none;
+    background-color: rgba(49, 141, 178, 0.8);
+}
 }

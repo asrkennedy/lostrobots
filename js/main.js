@@ -6,10 +6,12 @@ $(function(){
 
   var isMobile = window.matchMedia("only screen and (max-width: 760px)");
 
+  var element = $('.team_photo')
+
   function getPhotoWH() {
         $('.team_photo_hov').css({
-          width: teamPhoto.width(),
-          height: teamPhoto.height()
+          width: teamPhoto.width().toFixed(2),
+          height: teamPhoto.height().toFixed(2)
         });
   }
 
@@ -31,8 +33,8 @@ $(function(){
   }
 
 // Makes sections fill the browser's height
-  $('.header').css('min-height', windowHeight/2-66);
-  $('#section-1').css('min-height', windowHeight/2-66);
+  $('.header').css('min-height', windowHeight/2);
+  $('#section-1').css('min-height', windowHeight/2);
   $('#section-4').css('min-height', windowHeight-66);
 
   // Bounces robot
@@ -84,12 +86,7 @@ $('.team_photo').on('click', function(){
   $(window).resize(function(){
      if (isMobile.matches) {
      $('.title').show();
-    } else {
-      $('.title').hide();
-    }
-  })
-
-// Toggles nav on mobile for different clicks
+     // Toggles nav on mobile for different clicks
   $('.title').on('click',function(){
       $('nav ul').slideToggle();
   });
@@ -101,6 +98,10 @@ $('.team_photo').on('click', function(){
        $('nav ul').slideToggle();
     }
   });
+    } else {
+      $('.title').hide();
+    }
+  })
 
   // Gets height & width for hover div on load
   getPhotoWH();

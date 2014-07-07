@@ -85,23 +85,26 @@ $('.team_photo').on('click', function(){
   // Hides and shows robot for collapsible nav on resize for mobile
   $(window).resize(function(){
      if (isMobile.matches) {
-     $('.title').show();
-     // Toggles nav on mobile for different clicks
-  $('.title').on('click',function(){
-      $('nav ul').slideToggle();
-  });
-  $('nav ul li a').on('click', function(){
-    $('nav ul').slideToggle();
-  });
-  $('.back_to_top').on('click', function(){
-    if ($('nav ul').css('display') != 'none') {
-       $('nav ul').slideToggle();
-    }
-  });
+       $('.title').show();
     } else {
       $('.title').hide();
     }
   })
+
+   // Toggles nav on mobile for different clicks
+   if (isMobile.matches) {
+     $('.title').on('click',function(){
+          $('nav ul').slideToggle();
+      });
+      $('nav ul li a').on('click', function(){
+        $('nav ul').slideToggle();
+      });
+      $('.back_to_top').on('click', function(){
+        if ($('nav ul').css('display') != 'none') {
+           $('nav ul').slideToggle();
+        }
+      });
+   }
 
   // Gets height & width for hover div on load
   getPhotoWH();

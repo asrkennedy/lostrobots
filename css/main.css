@@ -122,15 +122,6 @@ aside {
   margin-right: 20px;
   float: right;
 }
-/*.mouth {
-  width: 15px;
-  height: 4px;
-  background-color: #fff;
-  margin: auto;
-  border-radius: 3px;
-  clear: both;
-  margin-top: 10px;
-}*/
 .neck {
   width: 50px;
   margin: auto;
@@ -349,7 +340,7 @@ hr {
     font-family: 'Roboto Slab';
 }
 
-.project_text a {
+.project_text a, .intro_text a {
     color: #FF1944;
     text-decoration: none;
     transition: 0.3s all linear;
@@ -359,8 +350,14 @@ hr {
 }
 
 .project_text li a:hover,
-.project_text li a:focus {
+.project_text li a:focus,
+.intro_text a:hover,
+.intro_text a:focus {
   color: #318DB2;
+}
+
+.experience li {
+  color: #005B7F;
 }
 
 #section-4 h2 {
